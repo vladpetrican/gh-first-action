@@ -1,0 +1,21 @@
+name: Second Workflow
+on: 
+  push: # runs the workflow when a push event on main branch will trigger the workflow
+    branches:
+      - 'main'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Starting
+        run: echo "Will set node 18" 
+      - name: Setting up node    
+        uses: actions/setup-node@v3 # for action you use "uses: action_name"
+        with: 
+          node-version: 18 # can configure the action
+      - name: Ending
+        run: echo "Bye bye" 
+        
+
+    
+  
