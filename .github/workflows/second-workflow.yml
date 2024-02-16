@@ -4,7 +4,7 @@ on:
     branches:
       - 'main'
 jobs:
-  test:
+  setup:
     runs-on: ubuntu-latest
     steps:
       - name: Starting
@@ -14,8 +14,11 @@ jobs:
         with: 
           node-version: 18 # can configure the action
       - name: Ending
-        run: echo "Bye bye" 
-        
-
-    
-  
+        run: echo "Bye bye"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start Build
+        run: "Starting build"
+      - name: End Build
+        run: "Ending Build"
