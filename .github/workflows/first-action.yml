@@ -1,0 +1,10 @@
+name: First Workflow #name of the workflow
+on: workflow_dispatch # will run on the workflow_dispatch event
+jobs: # what job to run
+  first-job: # name of the job
+    runs-on: ubuntu-latest # defining the runner, the environment that we want to use (ubuntu in this case)
+    steps: # defining a list of steps
+      - name: Print Greeting #the name of the step
+        run: echo "Hello World!" #defining the comand or can use defined comands
+      - name : Print goodby
+        run: echo "Bye bye" 
