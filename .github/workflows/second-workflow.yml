@@ -19,6 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Start Build
-        run: "Starting build"
+        run: echo "Starting build"
       - name: End Build
-        run: "Ending Build"
+        run: echo "Ending Build"
