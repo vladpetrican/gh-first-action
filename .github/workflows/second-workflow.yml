@@ -16,6 +16,7 @@ jobs:
       - name: Ending
         run: echo "Bye bye"
   build:
+    needs: setup # it will start after setup job will finish with success. can depend on multiple jobs using an array [ job1, job2, job3 ] 
     runs-on: ubuntu-latest
     steps:
       - name: Start Build
